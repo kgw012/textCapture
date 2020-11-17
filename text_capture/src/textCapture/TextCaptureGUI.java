@@ -27,9 +27,9 @@ class TextCaptureGUI extends JFrame implements ActionListener {
 	private JPanel menu_pn = new JPanel();
 	private JPanel textArea_pn = new JPanel();
 	
-	private JButton start_btn = new JButton("캡쳐모드 시작");
-	private JButton save_btn = new JButton("저장하기");
-	private JButton translate_btn = new JButton("번역하기");
+	private JButton start_btn = new JButton("캡쳐모드 활성화");
+	private JButton save_btn = new JButton("저장하기(x)");
+	private JButton translate_btn = new JButton("번역하기(x)");
 	
 	static JTextArea textArea = new JTextArea();
 	
@@ -80,12 +80,12 @@ class TextCaptureGUI extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(start_btn == e.getSource()) {
-			if(start_btn.getText().equals("캡쳐모드 시작")) {
-				start_btn.setText("캡쳐모드 중단");
+			if(start_btn.getText().equals("캡쳐모드 활성화")) {
+				start_btn.setText("캡쳐모드 비활성화");
 //				this.setState(JFrame.ICONIFIED);
 				pro.captureModeStart();
 			}else{
-				start_btn.setText("캡쳐모드 시작");
+				start_btn.setText("캡쳐모드 활성화");
 				pro.captureModeStop();
 			}
 		}

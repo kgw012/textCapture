@@ -24,7 +24,7 @@ class KeyHooker implements NativeKeyListener {
 		if(e.getKeyCode() == NativeKeyEvent.VC_SHIFT) {
 			isPressedShift = true;
 		}
-		if(isPressedAlt && isPressedShift && e.getKeyCode() == NativeKeyEvent.VC_S) {
+		if(isPressedAlt && isPressedShift && e.getKeyCode() == NativeKeyEvent.VC_C) {
 			isPressedAlt = false;
 			isPressedShift = false;
 			new CaptureFrame();
